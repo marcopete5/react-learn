@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from './MyNav';
+import Search from './Search';
+import Table from './Table';
 
 const list = [
   {
@@ -28,7 +30,6 @@ const greet = {
   }
 }
 
-const isSearched = searchTerm => item => item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
 class App extends Component {
   constructor(){
@@ -56,50 +57,28 @@ class App extends Component {
   }
 
   render() {
-    const {list, user, greet, searchTerm=''} = this.state;
     return (
       <div className="App">
         <Navbar title='hello' />
-        <Search
-          value={searchTerm}
-          onChange={this.onSearchChange}
-          />
-        <Table
-          list={list}
-          pattern={searchTerm}
-          onDismiss={this.onDismiss}
-        <form>
-          <input
-            type='text'
-            value={searchTerm}
-            onChange={this.onSearchChange}
-            />
-        </form>
         <h1>{greet.getUserName(user)}</h1>
-        {list.filter(isSearched(searchTerm)).map(item =>
-          <div key={item.objectID}>
-            <span>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
-            <span>
-              <button
-                onClick={() => this.onDismiss(item.objectID)}
-                type='button'
-                >
-                Dismiss
-              </button>
-            </span>
-          </div> )}
-          <button
+        <Search
+            value={this.state.searchTerm}
+            onChange={this.onSearchChange}
+            >
+          Search
+        </Search>
+        <Table
+            list={this.state.list}
+            pattern={this.state.searchTerm}
+            onDismiss={this.onDismiss}
+            />
+        <button
             onClick = {this.onClickMe}
             type='button'
             >
             Click Me
-          </button>
-        </div> );
+        </button>
+      </div> );
       }
 }
 

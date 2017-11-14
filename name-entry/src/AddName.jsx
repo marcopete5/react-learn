@@ -20,15 +20,21 @@ class AddName extends Component{
     names.push(this.state.inVal);
     this.setState({currentWord: this.state.names[this.state.names.length-1] })
     this.setState({names})
+    this.setState({inVal: ''});
+
+  }
+  deleteValue = (index) => {
+    names.splice(index, 1);
+    this.setState({names})
   }
   render(){
     return (
       <div>
         <h1>{this.state.currentWord}</h1>
-        <input type='text' onChange={this.getValue} ></input>
+        <input type='text' onChange={this.getValue} value={this.state.inVal}></input>
         <button onClick={this.addValue}>Submit</button>
         <ol>
-          {this.state.names.map(name => <li>{name}</li>)}
+          {this.state.names.map((name, i) => <div><li>{name}</li><button onClick={() => this.deleteValue(i)}>X</button></div>)}
         </ol>
       </div>
     );
