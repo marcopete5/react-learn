@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HitList from './HitList';
 import MyNav from './MyNav';
+import ColorComponent from './ColorComponent';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <div>
         <MyNav />
         <HitList />
+        <ColorComponent />
       </div>
     );
   }

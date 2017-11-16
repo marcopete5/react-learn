@@ -1,10 +1,10 @@
 {
-  "name": "colored-boxes",
+  "name": "random-color-component",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0"
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.17"
