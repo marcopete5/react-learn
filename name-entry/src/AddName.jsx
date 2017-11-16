@@ -19,9 +19,7 @@ class AddName extends Component{
   addValue = event => {
     names.push(this.state.inVal);
     this.setState({currentWord: this.state.names[this.state.names.length-1] })
-    this.setState({names})
-    this.setState({inVal: ''});
-
+    this.setState({names, inVal: ''})
   }
   deleteValue = (index) => {
     names.splice(index, 1);
