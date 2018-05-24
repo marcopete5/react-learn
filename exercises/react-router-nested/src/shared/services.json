@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Septic Cleanup",
+        "price": 950,
+        "description": "You know what this is, don't pretend like you don't"
+    },
+    {
+        "name": "Snaking",
+        "price": 500,
+        "description": "You know what this is, don't pretend like you don't"
+    },
+    {
+        "name": "Tree Digging",
+        "price": 5000,
+        "description": "You know what this is, don't pretend like you don't"
+    },
+    {
+        "name": "Drain Replacement",
+        "price": 150,
+        "description": "You know what this is, don't pretend like you don't"
+    }
+]

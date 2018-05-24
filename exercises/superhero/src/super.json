@@ -1,0 +1,14 @@
+{
+   "heros":[{
+        "id": 0,
+        "name": "Superman",
+        "img": "https://cdn.theatlantic.com/assets/media/img/mt/2016/01/superman/lead_960.jpg?1454104448",
+        "catchphrase": "velocity is cool"
+    },
+    {
+        "id": 1,
+        "name": "Wolverine",
+        "img": "https://www.empireonline.com/images/uploaded/the-wolverine-adamantium-claws.jpg",
+        "catchphrase": "i like cuts"
+    }]
+}
