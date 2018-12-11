@@ -1,0 +1,99 @@
+.bountyForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 12%;
+  margin: auto;
+  padding: 40px;
+}
+
+.bountyForm input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.bountyForm input[name='firstName'] {
+  grid-column: 1/-1
+}
+
+.bountyForm input[name='lastName'] {
+  grid-column: 1/-1
+}
+
+.bountyForm input[value='Jedi'] {
+  grid-column: 1/2
+}
+
+.bountyForm input[value='Sith'] {
+  grid-column: 2/-1
+}
+
+#living {
+  grid-column: 1/-1
+}
+
+.bountyForm input[name='bountyAmount'] {
+  grid-column: 1/-1
+}
+
+
+.bountyDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 76%;
+  margin: auto;
+  padding: 40px;
+}
+
+.bountyDiv input[value='Jedi'] {
+  grid-column: 1/2
+}
+
+.bountyDiv input[value='Sith'] {
+  grid-column: 2/-1
+}
+/* BountyDisplay Div */
+
+.allBounties {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+/* Bounty Div */
+
+.bounty {
+  border: 1px solid #d9d6d6;
+  margin: 15px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px #3333339e;
+}
+
+#jedi {
+  background-color: green;
+}
+
+#sith {
+  background-color: red;
+}
+
+/* Bounty link */
+
+.bountyLink {
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #767676;
+  padding: 30px;
+  height: 200px;
+  width: 200px;
+  margin: 0px 60px;
+  text-decoration: none;
+  color: #333;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.bountyImage {
+  width: 80%;
+  box-shadow: 2px 2px 6px #000000b3;
+}
