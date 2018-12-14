@@ -18,6 +18,7 @@ const BountyHandler = ({handleChange, handleSubmit, inputs, bountyClass}) => {
                 <span>Living?</span>   
             </div> 
             <input type="number" placeholder='Bounty Amount' name='bountyAmount' value={inputs.bountyAmount} onChange={handleChange} />
+            <input type="text" placeholder='Image Url' name='image' value={inputs.image} onChange={handleChange} />
             <button>Submit</button>
         </form>
     );

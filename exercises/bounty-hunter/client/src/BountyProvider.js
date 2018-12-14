@@ -21,13 +21,6 @@ class BountyProvider extends Component {
         })
     }
 
-    getBounty = id => {
-        axios.get(`/api/bounties/${id}`).then(response => {
-            this.setState({bounty: response.data})
-        })
-    }
-
-
     deleteBounties = id => {
         axios.delete(`/api/bounties/${id}`).then(response => {
             this.setState(({bounties}) => ({bounties: bounties.filter(bounty => id !== bounty._id)}))
@@ -54,7 +47,6 @@ class BountyProvider extends Component {
         return (
             <Provider value={{
                 getBounties: this.getBounties,
-                getBounty: this.getBounty,
                 submitBounties: this.submitBounties,
                 deleteBounties: this.deleteBounties,
                 editBounties: this.editBounties,

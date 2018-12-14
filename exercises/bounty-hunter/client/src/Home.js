@@ -15,7 +15,7 @@ class Home extends Component {
       <div>
         <Form 
           reset
-          inputs={{firstName: '', lastName: '', isJedi: 'Jedi', living: true, bountyAmount: ''}}
+          inputs={{firstName: '', lastName: '', isJedi: 'Jedi', living: true, bountyAmount: '', image: ''}}
           submit={inputs => this.props.submitBounties(inputs)}
           render={props => <BountyHandler bountyClass='bountyForm' {...props} />}
         />

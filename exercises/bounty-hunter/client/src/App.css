@@ -36,6 +36,14 @@
   grid-column: 1/-1
 }
 
+.bountyForm input[name='image'] {
+  grid-column: 1/-1
+}
+
+.bountyForm button {
+  grid-column: 1/-1
+}
+
 
 .bountyDiv {
   display: grid;
@@ -63,10 +71,20 @@
 /* Bounty Div */
 
 .bounty {
+  display: grid;
   border: 1px solid #d9d6d6;
-  margin: 15px;
+  width: 50%;
+  margin: auto;
   border-radius: 6px;
   box-shadow: 2px 2px 4px #3333339e;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-areas: 
+    'b b b b'
+    'l l l l'
+    'i i i i'
+    'n n n n'
+    't t t t'
+    'c c c c';
 }
 
 #jedi {
@@ -77,6 +95,46 @@
   background-color: red;
 }
 
+#bountyName {
+    grid-area: n;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px
+}
+
+#bountyType {
+  grid-area: t;
+  text-align: center;
+  position: relative;
+  bottom: 52px;
+  font-size: 15px;
+}
+
+#bountyStatus {
+  grid-area: l;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px 0px -15px 0px;
+} 
+
+#bountyPrice {
+  grid-area: b;
+  text-align: center;
+  font-size: 60px;
+  margin: 60px 0px -30px 0px;
+}
+
+.bounty img {
+  width: 35%;
+  grid-area: i;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.bounty button {
+  grid-area: c;
+}
+
 /* Bounty link */
 
 .bountyLink {
@@ -84,9 +142,9 @@
   border-radius: 10px;
   box-shadow: 1px 1px 4px #767676;
   padding: 30px;
-  height: 200px;
-  width: 200px;
-  margin: 0px 60px;
+  height: 250px;
+  width: 250px;
+  margin: 0px 35px;
   text-decoration: none;
   color: #333;
   font-family: monospace;
@@ -97,3 +155,4 @@
   width: 80%;
   box-shadow: 2px 2px 6px #000000b3;
 }
+
